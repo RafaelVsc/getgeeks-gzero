@@ -83,7 +83,12 @@ $ pip list
 5 - Para executar a bateria de testes completa:
 
 ```
+Linux
 $ ./run.sh
+
+Windows
+
+$ ./run.bat
 ```
 
 
