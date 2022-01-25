@@ -1,9 +1,9 @@
 <h1 align="center">
-    <img alt="MyDailyStatus" title="#fullstacklab" src="img/buger-eats.svg" width="250px" />
+    <img alt="GetGeeks" title="getgeeks" src="https://getgeeks-vescio.herokuapp.com/static/media/logo.7ca85960.svg" width="250px" />
 </h1>
 
 <h4 align="center">
-  🚀 RobotFramework Automation
+  🤖 RobotFramework Automation
 </h4>
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/RafaelVsc/getgeeks-gzero">
