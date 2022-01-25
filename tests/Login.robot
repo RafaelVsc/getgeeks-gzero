@@ -47,13 +47,11 @@ Incorrect email
     Submit Credentials
     Should Be Type Email
 
-# Desafio 1 do modulo PRO
-# Automatizando 3 novos de casos de testes: EMail Obrigatório, Senha Obrigatória, Campos Obrigatórios
 
-Email Field is required
+Required Email
     [Tags]      req_fields
 
-    ${user}     Create Dictionary       email=        password=abc123
+    ${user}     Create Dictionary       email=${EMPTY}        password=abc123
     
     Go To Login Page
     Fill Credentials  ${user}
@@ -61,10 +59,10 @@ Email Field is required
     Alert Span Should Be  E-mail obrigatório
 
 
-Password Field is required
+Required Password
     [Tags]      req_fields
 
-    ${user}     Create Dictionary       email=vescio@hotmail.com        password=
+    ${user}     Create Dictionary       email=vescio@hotmail.com        password=${EMPTY}
     
     Go To Login Page
     Fill Credentials  ${user}
@@ -72,7 +70,7 @@ Password Field is required
     Alert Span Should Be  Senha obrigatória
 
 
-Login Fields is required
+Required Fields
     [Tags]      req_fields
     
 
