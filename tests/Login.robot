@@ -18,7 +18,7 @@ User Login
     
 
 Incorrect password
-    [Tags]      i_pass
+    [Tags]      inc_pass
 
     ${user}     Create Dictionary   email=vescio@hotmail.com    password=abc123
 
@@ -38,7 +38,7 @@ User not found
     Modal Content Should Be  Usuário e/ou senha inválidos.
 
 Incorrect email
-    [Tags]      i_email
+    [Tags]      inc_email
 
     ${user}     Create Dictionary   email=vescio.com.br    password=abc123
 
