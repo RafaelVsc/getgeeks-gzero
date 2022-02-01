@@ -9,6 +9,7 @@ Library     factories/Users.py
 Resource    actions/_SharedActions.robot
 Resource    actions/AuthActions.robot
 Resource    actions/SignupActions.robot
+Resource    actions/BeGeekActions.robot
 
 Resource    Database.robot
 Resource    Helpers.robot
