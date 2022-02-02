@@ -9,6 +9,8 @@ Test Teardown   Finish Session
 
 *Test Cases*
 Register a new user
+    [Tags]      smoke
+
     ${user}     Factory User    faker
 
     Go To Signup Form
@@ -55,7 +57,7 @@ Required Fields
     Alert Spans Should Be  ${expected_alerts}
 
 Short Password
-    [Tags]      attempt_signup      short_pass
+    [Tags]      attempt_signup      short_password
     [Template]  Signup With Short Pass
     1
     12
