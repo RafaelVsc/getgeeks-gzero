@@ -5,7 +5,7 @@ Resource        ${EXECDIR}/resources/Base.robot
 # Resource        ${EXECDIR}/resources/Actions.robot
 
 Test Setup      Start Session
-Test Teardown   Finish Session
+Test Teardown   After Test
 
 *Test Cases*
 Register a new user
