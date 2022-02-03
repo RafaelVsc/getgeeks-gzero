@@ -1,8 +1,8 @@
 *Settings*
 Documentation       Attempt BeGeek Test Suite
 
-Resource    ${EXECDIR}/resources/Base.robot
-Suite Setup      Start Session For Attempt Be Geek
+Resource        ${EXECDIR}/resources/Base.robot
+Suite Setup     Start Session For Attempt Be Geek
 Test Template   Attempt Be a Geek
 
 *Variables*
@@ -19,6 +19,8 @@ String Cost             cost               aaaa                    Valor hora de
 Alhpanum Cost           cost               aa12                    Valor hora deve ser numérico
 Special chars Cost      cost               $%^&                    Valor hora deve ser numérico
 Empty Cost              cost               ${EMPTY}                Valor hora deve ser numérico
+Empty Printer Repair    printer_repair     ${Empty}                Por favor, informe se você é um Geek Supremo
+Empty Work Method       work_method        ${Empty}                Por favor, selecione o modelo de trabalho
 
 
 

@@ -10,11 +10,19 @@ Go To Geek Form
 Fill Geek Form
     [Arguments]     ${geek_profile}
 
+    Reset Geek Form
+
     Fill Text               id=whatsapp                 ${geek_profile}[whatsapp]
     Fill Text               id=desc                     ${geek_profile}[description]
+
+    IF      '${geek_profile}[printer_repair]'
+        Select Options By       id=printer_repair   value   ${geek_profile}[printer_repair]
+    END
     
-    Select Options By       id=printer_repair   value   ${geek_profile}[printer_repair]
-    Select Options By       id=work             text   ${geek_profile}[work_method]
+
+    IF      '${geek_profile}[work_method]'
+        Select Options By       id=work             text   ${geek_profile}[work_method]
+    END
 
     Fill Text               id=cost                     ${geek_profile}[cost]
 
@@ -27,3 +35,7 @@ Geek Form Should Be Success
     ${expected_message}     Set Variable        Seu cadastro está na nossa lista de geeks. Agora é só ficar de olho no seu WhatsApp.
 
     Wait For Elements State     css=p >> text=${expected_message}       visible     5
+
+Reset Geek Form
+
+    Execute Javascript      document.getElementsByClassName("be-geek-form")[0].reset();
