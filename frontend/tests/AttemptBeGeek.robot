@@ -9,7 +9,7 @@ Test Template   Attempt Be a Geek
 ${long_desc}    Instalo Distros Ubuntu, Debian, ElementaryOS, PopOS, Linux Mint, Kurumin, Mandrake, Connectiva, Fedora, RedHat, CentOS, Slackware, Gentoo, Archlinux, Kubuntu, Xubuntu, Suze, Mandriva, Edubuntu, KateOS, Sabayon Linux, Manjaro Linux, BigLinux, ZorinOS, Unity
 
 *Test Cases*
-Short Description       description        Formato o seu PC        A descrição deve ter no minimo 80 caracteres
+Short Description       description        Formato o seu PC        A descrição deve ter no minimo 81 caracteres
 Long Description        description        ${long_desc}            A descrição deve ter no máximo 255 caracteres
 Empty Description       description        ${EMPTY}                Informe a descrição do seu trabalho
 Only DDD Phone          whatsapp           11                      O Whatsapp deve ter 11 digitos contando com o DDD
