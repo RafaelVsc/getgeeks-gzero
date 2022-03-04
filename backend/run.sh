@@ -1,1 +1,1 @@
-robot -d ./logs tests
+robot --xunit xunit.xml -d ./logs tests
