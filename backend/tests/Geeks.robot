@@ -38,6 +38,9 @@ Be a geek
 
     ${expected_cost}       Convert To Number    ${user}[geek_profile][cost]
     ${got_cost}            Convert To Number    ${response.json()}[cost]
+    Log                    ${got_cost}
+    Log                    ${expected_cost}
+
 
     Should Be Equal           ${expected_cost}       ${got_cost}
 
