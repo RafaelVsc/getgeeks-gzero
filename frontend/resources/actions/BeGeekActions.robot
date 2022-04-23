@@ -7,28 +7,46 @@ Go To Geek Form
 
     Wait For Elements State     css=.be-geek-form   visible     5
 
+Got To Geeks
+    Click       css=a[href="/geeks"] >> text=Geeks
+    Wait For Elements State     css=div.title>strong >> text=Estes são os Geeks disponíveis.
+    ...                         visible     5    
+
 Fill Geek Form
     [Arguments]     ${geek_profile}
 
     Reset Geek Form
 
     Fill Text               id=whatsapp                 ${geek_profile}[whatsapp]
-    Fill Text               id=desc                     ${geek_profile}[description]
+    Fill Text               id=desc                     ${geek_profile}[desc]
 
     IF      '${geek_profile}[printer_repair]'
         Select Options By       id=printer_repair   value   ${geek_profile}[printer_repair]
     END
     
 
-    IF      '${geek_profile}[work_method]'
-        Select Options By       id=work             text   ${geek_profile}[work_method]
+    IF      '${geek_profile}[work]'
+        Select Options By       id=work             text   ${geek_profile}[work]
     END
 
     Fill Text               id=cost                     ${geek_profile}[cost]
 
+Fill Search Form
+    [Arguments]     ${printer_option}      ${target_text}
+
+    IF      '${printer_option}'
+        Select Options By   id=printer_repair       value       ${printer_option}
+    END
+
+    Fill Text           id=desc             ${target_text}
+
 
 Submit Geek Form
     Click       css=button >> text=Quero ser um Geek
+
+Submit Search Form
+    Click       css=button[type="submit"] >> text=Buscar
+
 
 
 Geek Form Should Be Success
@@ -36,6 +54,30 @@ Geek Form Should Be Success
 
     Wait For Elements State     css=p >> text=${expected_message}       visible     5
 
+Geek Should Be Found
+    [Arguments]     ${geek}
+
+    ${full_name}    Set Variable    ${geek}[name] ${geek}[lastname]
+
+    ${target_geek}       Get Element        xpath=//strong[contains(text(), "${full_name}")]/../../..
+    ${work}     Convert To Lower Case       ${geek}[geek_profile][work]
+
+    Get Text        ${target_geek}   contains        Atendimento ${work}
+    Get Text        ${target_geek}   contains        ${geek}[geek_profile][desc]
+    Get Text        ${target_geek}   contains        ${geek}[geek_profile][cost]
+
+    Set Suite Variable      ${target_geek}
+
+Alien Icon Should Be Visible
+    Get Text        ${target_geek}   contains    👽
+
+
 Reset Geek Form
 
     Execute Javascript      document.getElementsByClassName("be-geek-form")[0].reset();
+
+
+Geek Not Found
+
+    Wait For Elements State     css=.search-not-found p >> text=Não encontramos Geeks com o(s) termo(s) informado na busca!
+    ...                         visible     5
