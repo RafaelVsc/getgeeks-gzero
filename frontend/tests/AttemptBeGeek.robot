@@ -9,9 +9,9 @@ Test Template   Attempt Be a Geek
 ${long_desc}    Instalo Distros Ubuntu, Debian, ElementaryOS, PopOS, Linux Mint, Kurumin, Mandrake, Connectiva, Fedora, RedHat, CentOS, Slackware, Gentoo, Archlinux, Kubuntu, Xubuntu, Suze, Mandriva, Edubuntu, KateOS, Sabayon Linux, Manjaro Linux, BigLinux, ZorinOS, Unity
 
 *Test Cases*
-Short Description       description        Formato o seu PC        A descrição deve ter no minimo 80 caracteres
-Long Description        description        ${long_desc}            A descrição deve ter no máximo 255 caracteres
-Empty Description       description        ${EMPTY}                Informe a descrição do seu trabalho
+Short Description       desc               Formato o seu PC        A descrição deve ter no minimo 80 caracteres
+Long Description        desc               ${long_desc}            A descrição deve ter no máximo 255 caracteres
+Empty Description       desc               ${EMPTY}                Informe a descrição do seu trabalho
 Only DDD Phone          whatsapp           11                      O Whatsapp deve ter 11 digitos contando com o DDD
 Only Phone Number       whatsapp           999999999               O Whatsapp deve ter 11 digitos contando com o DDD
 Empty Phone             whatsapp           ${EMPTY}                O Whatsapp deve ter 11 digitos contando com o DDD
@@ -20,7 +20,7 @@ Alhpanum Cost           cost               aa12                    Valor hora de
 Special chars Cost      cost               $%^&                    Valor hora deve ser numérico
 Empty Cost              cost               ${EMPTY}                Valor hora deve ser numérico
 Empty Printer Repair    printer_repair     ${Empty}                Por favor, informe se você é um Geek Supremo
-Empty Work Method       work_method        ${Empty}                Por favor, selecione o modelo de trabalho
+Empty Work Method       work               ${Empty}                Por favor, selecione o modelo de trabalho
 
 
 
